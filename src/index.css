@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --color-islamic-green: #1b4332;
+  --color-islamic-gold: #d4af37;
+  --color-islamic-cream: #fcf8f1;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    direction: rtl;
+  }
+  body {
+    @apply bg-islamic-cream text-gray-800 font-sans;
+  }
+}
+
+.islamic-pattern {
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+}
+
+.gradient-overlay {
+  background: linear-gradient(to bottom, transparent, rgba(27, 67, 50, 0.8));
+}
