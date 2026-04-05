@@ -6,7 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 const navItems = [
   { id: "home", label: "الرئيسية", icon: <User size={18} />, type: "scroll" },
   { id: "cv", label: "السيرة الذاتية", icon: <GraduationCap size={18} />, type: "scroll" },
-  { id: "recitations", label: "القراءات", icon: <Mic2 size={18} />, type: "scroll" },
+  { id: "recitations", label: "الفعاليات", icon: <Mic2 size={18} />, type: "scroll" },
   { id: "works", label: "المؤلفات", icon: <BookOpen size={18} />, type: "scroll" },
   { id: "students", label: "التلاميذ", icon: <Users size={18} />, type: "link", path: "/students" },
   { id: "contact", label: "تواصل معنا", icon: <Mail size={18} />, type: "scroll" },
