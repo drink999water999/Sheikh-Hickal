@@ -35,7 +35,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-1">رقم الهاتف</p>
-                  <p className="font-bold text-gray-800" dir="ltr">+20 123 456 789</p>
+                  <p className="font-bold text-gray-800" dir="ltr">01554869778</p>
                 </div>
               </div>
 
