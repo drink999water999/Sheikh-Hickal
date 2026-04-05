@@ -34,8 +34,16 @@ export default function ContactSection() {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 mb-1">رقم الهاتف</p>
-                  <p className="font-bold text-gray-800" dir="ltr">01554869778</p>
+                  <p className="text-xs text-gray-500 mb-1">رقم الهاتف / واتساب</p>
+                  <a 
+                    href="https://wa.me/201554869778" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-bold text-gray-800 hover:text-islamic-green transition-colors" 
+                    dir="ltr"
+                  >
+                    +20 155 486 9778
+                  </a>
                 </div>
               </div>
 
@@ -45,7 +53,15 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-1">واتساب</p>
-                  <a href="#" className="font-bold text-islamic-green hover:underline" dir="ltr">إرسال رسالة مباشرة</a>
+                  <a 
+                    href="https://wa.me/201554869778" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-bold text-islamic-green hover:underline" 
+                    dir="ltr"
+                  >
+                    إرسال رسالة مباشرة
+                  </a>
                 </div>
               </div>
 
