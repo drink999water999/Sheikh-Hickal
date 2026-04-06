@@ -76,6 +76,45 @@ export default function RecitationsSection() {
             </motion.div>
           </div>
         </div>
+
+        {/* Ijazat Photos */}
+        <div className="mt-24 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
+            {['ejazza1', 'ejazza2', 'ejazza3', 'ejazza4'].map((img) => (
+              <motion.div 
+                key={img}
+                whileHover={{ y: -10 }}
+                className="group rounded-3xl overflow-hidden shadow-xl bg-white border border-gray-100"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={`/${img}.jpeg`} 
+                    alt="" 
+                    className="w-full h-full object-contain bg-gray-50 transition-transform duration-500 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* ejazza5 - wider and middle */}
+          <div className="flex justify-center">
+            <motion.div 
+              whileHover={{ y: -10 }}
+              className="group rounded-3xl overflow-hidden shadow-xl bg-white border border-gray-100 w-full lg:w-4/5"
+            >
+              <div className="aspect-[1920/913] overflow-hidden">
+                <img 
+                  src="/ejazza5.png" 
+                  alt="" 
+                  className="w-full h-full object-contain bg-gray-50 transition-transform duration-500 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

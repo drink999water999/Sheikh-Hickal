@@ -11,7 +11,7 @@ export default function Footer() {
             </div>
             <div>
               <h3 className="font-bold text-xl">الشيخ عبد الفتاح هيكل</h3>
-              <p className="text-xs text-islamic-gold">جامع للقراءات العشر ومحكم دولي</p>
+              <p className="text-xs text-islamic-gold">الجامع للقراءات العشر ومحكم دولي</p>
             </div>
           </div>
 

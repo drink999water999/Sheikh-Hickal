@@ -37,13 +37,13 @@ export default function ContactSection() {
                   <div>
                     <p className="text-xs text-gray-500 mb-1">رقم الهاتف / واتساب</p>
                     <a 
-                      href="https://wa.me/201554869778" 
+                      href="https://wa.me/201022351450" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="font-bold text-gray-800 hover:text-islamic-green transition-colors" 
                       dir="ltr"
                     >
-                      +20 155 486 9778
+                      +20 102 235 1450
                     </a>
                   </div>
                 </div>
@@ -55,7 +55,7 @@ export default function ContactSection() {
                   <div>
                     <p className="text-xs text-gray-500 mb-1">واتساب</p>
                     <a 
-                      href="https://wa.me/201554869778" 
+                      href="https://wa.me/201022351450" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="font-bold text-islamic-green hover:underline" 
