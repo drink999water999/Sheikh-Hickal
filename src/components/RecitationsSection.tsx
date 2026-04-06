@@ -79,6 +79,11 @@ export default function RecitationsSection() {
 
         {/* Ijazat Photos */}
         <div className="mt-24 max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-islamic-green mb-4">بعض الإجازات</h3>
+            <div className="w-24 h-1 bg-islamic-gold mx-auto"></div>
+          </div>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
             {['ejazza1', 'ejazza2', 'ejazza3', 'ejazza4'].map((img) => (
               <motion.div 
