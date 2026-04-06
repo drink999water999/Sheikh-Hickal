@@ -11,23 +11,12 @@ export default function Footer() {
             </div>
             <div>
               <h3 className="font-bold text-xl">الشيخ عبد الفتاح هيكل</h3>
-              <p className="text-xs text-islamic-gold">عالم في القراءات العشر ومحكم دولي</p>
+              <p className="text-xs text-islamic-gold">جامع للقراءات العشر ومحكم دولي</p>
             </div>
           </div>
 
           <div className="flex items-center gap-6">
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-islamic-gold hover:text-islamic-green transition-all">
-              <Facebook size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-islamic-gold hover:text-islamic-green transition-all">
-              <Twitter size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-islamic-gold hover:text-islamic-green transition-all">
-              <Youtube size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-islamic-gold hover:text-islamic-green transition-all">
-              <Instagram size={20} />
-            </a>
+            {/* Social media removed as requested */}
           </div>
         </div>
 

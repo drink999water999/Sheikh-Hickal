@@ -1,29 +1,66 @@
-import { motion } from "motion/react";
-import { GraduationCap, Award, Briefcase, MapPin, Calendar } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { GraduationCap, Award, Briefcase, MapPin, Calendar, User, ChevronDown, ChevronLeft } from "lucide-react";
+import { useState } from "react";
 
 const info = [
   { icon: <Calendar size={20} />, label: "تاريخ الميلاد", value: "23 نوفمبر 1987م" },
-  { icon: <MapPin size={20} />, label: "مكان الميلاد", value: "قرية سدود - منوف - المنوفية" },
+  { icon: <MapPin size={20} />, label: "محل الإقامة", value: "مدينة نصر الحي الثامن" },
   { icon: <GraduationCap size={20} />, label: "المؤهل", value: "ليسانس الدراسات الإسلامية والعربية - جامعة الأزهر 2009م" },
 ];
 
 const experience = [
-  { title: "مدرس بالأزهر الشريف", period: "2012م - 2016م" },
-  { title: "مدرس بمالكة العربية السعودية", period: "2016م - 2020م" },
+  { title: "مدرس بالأزهر الشريف", period: "حتى تاريخه" },
+  { title: "مدرس بالمملكة العربية السعودية", period: "2016م - 2020م" },
   { title: "عضو مقرأة بوزارة الأوقاف", period: "2005م - 2016م" },
-  { title: "عضو لجنة مراجعة مصحف الأمة", period: "تركيا، ماليزيا، إندونيسيا" },
-  { title: "محكم دولي في مسابقات القرآن", period: "كينيا، تونس، تنزانيا، الجزائر، تركيا" },
+  { title: "عضو لجنة مراجعة مصحف الأمة", period: "مراجعة وتدقيق" },
+  { title: "محكم دولي في مسابقات القرآن", period: "" },
 ];
 
 const ijazat = [
-  "قراءة حفص عن عاصم (أكثر من شيخ)",
-  "قراءة عاصم (أكثر من شيخ)",
-  "القراءات العشر الصغرى (كامل القرآن)",
-  "القراءات السبع",
-  "القراءات العشر الكبرى",
+  { 
+    title: "قراءة حفص عن عاصم", 
+    teachers: ["الشيخ زكريا محمد عبد العاطي", "الشيخ أحمد جبصيني", "الشيخ محمد إبراهيم البدوي (أتمه تلميذه الشيخ عبده محمود جبل)"]
+  },
+  { 
+    title: "قراءة عاصم", 
+    teachers: ["الدكتور صفوت سالم (رحمه الله)", "الشيخ صلاح الدين فخري (رحمه الله)", "الشيخ عبده محمود جبل", "الشيخ خميس عيص", "الشيخ محمد وائل الحنبلي"]
+  },
+  { 
+    title: "القراءات العشر الصغرى", 
+    teachers: [
+      "الشيخ محمود محمد ديري (شيخ قراء حلب)", 
+      "الشيخ سعيد يحيى عبد المعطي رزق", 
+      "الشيخ خالد عبد السلام بركات الدمشقي", 
+      "الشيخ يسري سعد", 
+      "الشيخ أحمد جبصيني", 
+      "الشيخ خميس عيص", 
+      "الشيخ محمد إدريس العاصم", 
+      "الشيخ عبد التواب علي روضان (رحمه الله)"
+    ]
+  },
+  { 
+    title: "القراءات السبع", 
+    teachers: ["الشيخ محمود عبد الفتاح أبو قلوب", "الشيخ محمد يونس الغلبان"]
+  },
+  { 
+    title: "القراءات العشر الكبرى", 
+    teachers: [
+      "الشيخ حامد الجمسي", 
+      "الدكتور أحمد عيسى المعصراوي", 
+      "الشيخ أحمد حامد آل طعيمة", 
+      "الدكتور محمد سكري", 
+      "الشيخ حافظ عثمان شاهين", 
+      "الشيخ محمود أبو قلوب", 
+      "الشيخ رمضان نبيه", 
+      "الدكتور خالد عبد السلام بركات", 
+      "الشيخ عبد الباسط حسان مازن"
+    ]
+  },
 ];
 
 export default function CVSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <section id="cv" className="py-24 bg-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-64 h-64 bg-islamic-cream rounded-full -translate-y-1/2 translate-x-1/2 opacity-50"></div>
@@ -74,13 +111,13 @@ export default function CVSection() {
                 <div key={idx} className="relative pr-6 border-r-2 border-islamic-gold/30 pb-4 last:pb-0">
                   <div className="absolute top-0 right-[-5px] w-2 h-2 bg-islamic-gold rounded-full"></div>
                   <h4 className="font-bold text-gray-800 mb-1">{item.title}</h4>
-                  <p className="text-sm text-gray-500">{item.period}</p>
+                  {item.period && <p className="text-sm text-gray-500">{item.period}</p>}
                 </div>
               ))}
             </div>
           </motion.div>
 
-          {/* Ijazat */}
+          {/* Ijazat Accordion */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -91,19 +128,41 @@ export default function CVSection() {
               <Award size={24} />
               الإجازات العلمية
             </h3>
-            <ul className="space-y-4">
+            <div className="space-y-3">
               {ijazat.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-islamic-gold rounded-full shrink-0"></div>
-                  <span className="text-gray-100">{item}</span>
-                </li>
+                <div key={idx} className="border-b border-white/10 last:border-0 pb-2">
+                  <button 
+                    onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                    className="w-full flex items-center justify-between py-2 text-right hover:text-islamic-gold transition-colors group"
+                  >
+                    <span className="font-medium">{item.title}</span>
+                    {openIndex === idx ? <ChevronDown size={18} /> : <ChevronLeft size={18} />}
+                  </button>
+                  <AnimatePresence>
+                    {openIndex === idx && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden"
+                      >
+                        <ul className="pr-4 py-2 space-y-1">
+                          {item.teachers.map((teacher, tIdx) => (
+                            <li key={tIdx} className="text-sm text-gray-300 flex items-center gap-2">
+                              <div className="w-1 h-1 bg-islamic-gold rounded-full"></div>
+                              {teacher}
+                            </li>
+                          ))}
+                        </ul>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
-            </ul>
+            </div>
           </motion.div>
         </div>
       </div>
     </section>
   );
 }
-
-import { User } from "lucide-react";

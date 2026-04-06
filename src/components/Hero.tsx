@@ -15,11 +15,11 @@ export default function Hero() {
           className="flex-1 text-center md:text-right text-white"
         >
           <h2 className="text-islamic-gold font-medium text-lg md:text-xl mb-2">أهلاً بكم في الموقع الرسمي لـ</h2>
-          <h1 className="text-3xl md:text-6xl font-extrabold mb-4 md:mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 md:mb-6 leading-tight">
             الشيخ عبد الفتاح مصطفى هيكل
           </h1>
           <p className="text-base md:text-xl text-gray-200 max-w-2xl md:ml-auto leading-relaxed mb-6 md:mb-8">
-            عالم في القراءات العشر الكبرى والصغرى، ومحكم دولي في مسابقات القرآن الكريم العالمية، وعضو لجان مراجعة المصاحف الدولية.
+            جامع للقراءات العشر الكبرى والصغرى، ومحكم دولي في مسابقات القرآن الكريم العالمية، وعضو لجان مراجعة المصاحف الدولية.
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
             <button 

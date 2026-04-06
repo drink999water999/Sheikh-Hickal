@@ -19,133 +19,70 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="space-y-8"
           >
-            <div className="bg-islamic-cream p-8 rounded-3xl space-y-6">
-              <h3 className="text-2xl font-bold text-islamic-green mb-4">معلومات التواصل</h3>
+            <div className="bg-islamic-cream p-8 rounded-3xl space-y-6 shadow-sm border border-islamic-gold/10">
+              <h3 className="text-2xl font-bold text-islamic-green text-center mb-8">معلومات التواصل</h3>
               
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-islamic-gold shadow-sm">
-                  <Phone size={24} />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
+                  <div className="w-12 h-12 bg-islamic-cream rounded-xl flex items-center justify-center text-islamic-gold">
+                    <Phone size={24} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">رقم الهاتف / واتساب</p>
+                    <a 
+                      href="https://wa.me/201554869778" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="font-bold text-gray-800 hover:text-islamic-green transition-colors" 
+                      dir="ltr"
+                    >
+                      +20 155 486 9778
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs text-gray-500 mb-1">رقم الهاتف / واتساب</p>
-                  <a 
-                    href="https://wa.me/201554869778" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="font-bold text-gray-800 hover:text-islamic-green transition-colors" 
-                    dir="ltr"
-                  >
-                    +20 155 486 9778
-                  </a>
+
+                <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
+                  <div className="w-12 h-12 bg-islamic-cream rounded-xl flex items-center justify-center text-islamic-gold">
+                    <MessageSquare size={24} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">واتساب</p>
+                    <a 
+                      href="https://wa.me/201554869778" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="font-bold text-islamic-green hover:underline" 
+                      dir="ltr"
+                    >
+                      إرسال رسالة مباشرة
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-islamic-gold shadow-sm">
-                  <MessageSquare size={24} />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500 mb-1">واتساب</p>
-                  <a 
-                    href="https://wa.me/201554869778" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="font-bold text-islamic-green hover:underline" 
-                    dir="ltr"
-                  >
-                    إرسال رسالة مباشرة
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-islamic-gold shadow-sm">
-                  <Mail size={24} />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500 mb-1">البريد الإلكتروني</p>
-                  <p className="font-bold text-gray-800">info@sheikh-heikal.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-islamic-gold shadow-sm">
+              <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
+                <div className="w-12 h-12 bg-islamic-cream rounded-xl flex items-center justify-center text-islamic-gold">
                   <MapPin size={24} />
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-1">العنوان</p>
-                  <p className="font-bold text-gray-800">جمهورية مصر العربية - المنوفية</p>
+                  <p className="font-bold text-gray-800">جمهورية مصر العربية - مدينة نصر الحي الثامن</p>
                 </div>
               </div>
             </div>
 
             <div className="p-6 border-2 border-dashed border-islamic-gold/30 rounded-3xl text-center">
               <p className="text-gray-500 text-sm">
-                متاح للتواصل العلمي والاستشارات في علوم القراءات طوال أيام الأسبوع.
+                متاح للتواصل العلمي والاستشارات في علوم القراءات طوال أيام الأسبوع عبر الواتساب.
               </p>
             </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100"
-          >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-700">الاسم الكامل</label>
-                  <input 
-                    type="text" 
-                    placeholder="أدخل اسمك هنا"
-                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-islamic-gold focus:ring-2 focus:ring-islamic-gold/20 outline-none transition-all"
-                    required
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-700">البريد الإلكتروني</label>
-                  <input 
-                    type="email" 
-                    placeholder="example@mail.com"
-                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-islamic-gold focus:ring-2 focus:ring-islamic-gold/20 outline-none transition-all text-left"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-700">الموضوع</label>
-                <input 
-                  type="text" 
-                  placeholder="ما هو موضوع رسالتك؟"
-                  className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-islamic-gold focus:ring-2 focus:ring-islamic-gold/20 outline-none transition-all"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-700">الرسالة</label>
-                <textarea 
-                  rows={5}
-                  placeholder="اكتب رسالتك هنا..."
-                  className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-islamic-gold focus:ring-2 focus:ring-islamic-gold/20 outline-none transition-all resize-none"
-                  required
-                ></textarea>
-              </div>
-              <button 
-                type="submit"
-                className="w-full py-4 bg-islamic-green text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-islamic-gold hover:text-islamic-green transition-all shadow-lg"
-              >
-                <Send size={20} />
-                إرسال الرسالة
-              </button>
-            </form>
           </motion.div>
         </div>
       </div>
