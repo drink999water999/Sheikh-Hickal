@@ -1,10 +1,9 @@
 import { motion, AnimatePresence } from "motion/react";
-import { GraduationCap, Award, Briefcase, MapPin, Calendar, User, ChevronDown, ChevronLeft } from "lucide-react";
+import { GraduationCap, Award, Briefcase, MapPin, User, ChevronDown, ChevronLeft } from "lucide-react";
 import { useState } from "react";
 
 const info = [
-  { icon: <Calendar size={20} />, label: "تاريخ الميلاد", value: "23 نوفمبر 1987م" },
-  { icon: <MapPin size={20} />, label: "محل الإقامة", value: "مدينة نصر الحي الثامن" },
+  { icon: <MapPin size={20} />, label: "محل الإقامة", value: "القاهرة - جمهورية مصر العربية" },
   { icon: <GraduationCap size={20} />, label: "المؤهل", value: "ليسانس الدراسات الإسلامية والعربية - جامعة الأزهر 2009م" },
 ];
 

@@ -73,7 +73,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-1">العنوان</p>
-                  <p className="font-bold text-gray-800">جمهورية مصر العربية - مدينة نصر الحي الثامن</p>
+                  <p className="font-bold text-gray-800">القاهرة - جمهورية مصر العربية</p>
                 </div>
               </div>
             </div>

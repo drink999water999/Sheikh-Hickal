@@ -20,12 +20,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <div className="border-t border-white/5 pt-8 text-center text-sm text-gray-400">
           <p>© {new Date().getFullYear()} جميع الحقوق محفوظة لموقع الشيخ عبد الفتاح هيكل.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-islamic-gold transition-colors">سياسة الخصوصية</a>
-            <a href="#" className="hover:text-islamic-gold transition-colors">شروط الاستخدام</a>
-          </div>
         </div>
       </div>
     </footer>
