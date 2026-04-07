@@ -19,7 +19,7 @@ export default function Hero() {
             الشيخ عبد الفتاح مصطفى هيكل
           </h1>
           <p className="text-base md:text-xl text-gray-200 max-w-2xl md:ml-auto leading-relaxed mb-6 md:mb-8">
-            الجامع للقراءات العشر الكبرى والصغرى، ومحكم دولي في مسابقات القران و القراءات و الاداء الصوتي، وعضو لجان مراجعة المصاحف الدولية.
+            الجامع للقراءات العشر الصغري و الكبري، ومحكم دولي في مسابقات القران و القراءات و الاداء الصوتي، وعضو لجان مراجعة المصاحف الدولية.
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
             <button 
